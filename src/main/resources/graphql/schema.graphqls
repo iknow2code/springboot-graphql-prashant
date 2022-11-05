@@ -1,0 +1,20 @@
+type Mutation{
+    setDetails(bank: BankInput):Bank
+}
+type Query{
+    getAllDetails:[Bank]
+    getDetails(id:Int):Bank
+}
+type Bank{
+    id: ID!
+    name:String!
+    phone:String!
+    email:String!
+    address:String!
+}
+input BankInput{
+    name:String
+    phone:String
+    email:String
+    address:String
+}
